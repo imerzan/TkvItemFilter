@@ -15,7 +15,7 @@ namespace TkvItemFilter
         {
             get
             {
-                string[] arr = new string[7];
+                string[] arr = new string[8];
                 arr[0] = Key;
                 arr[1] = Name;
                 arr[2] = ShortName;
@@ -23,6 +23,7 @@ namespace TkvItemFilter
                 arr[4] = Group.ToString();
                 arr[5] = Important.ToString();
                 arr[6] = ShowItem.ToString();
+                arr[7] = DontUpdate.ToString();
                 var item = new ListViewItem(arr);
                 item.Tag = this;
                 return item;
@@ -38,6 +39,7 @@ namespace TkvItemFilter
             Group = 5;
             Important = false;
             ShowItem = true;
+            DontUpdate = false;
         }
         [JsonIgnore]
         public string Key { get; set; }
@@ -59,6 +61,8 @@ namespace TkvItemFilter
 
         [JsonProperty("showItem")]
         public bool ShowItem { get; set; }
+        [JsonProperty("dontUpdate")]
+        public bool DontUpdate { get; set; }
 
     }
 

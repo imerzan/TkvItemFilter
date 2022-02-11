@@ -43,11 +43,14 @@
             this.button_Remove = new System.Windows.Forms.Button();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.columnHeader_DontUpdate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Save
             // 
-            this.button_Save.Location = new System.Drawing.Point(704, 406);
+            this.button_Save.Location = new System.Drawing.Point(9, 343);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(92, 23);
             this.button_Save.TabIndex = 0;
@@ -69,14 +72,16 @@
             this.columnHeader_QuestItem,
             this.columnHeader_Group,
             this.columnHeader_Important,
-            this.columnHeader_ShowItem});
+            this.columnHeader_ShowItem,
+            this.columnHeader_DontUpdate});
+            this.listView_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView_Main.FullRowSelect = true;
             this.listView_Main.GridLines = true;
             this.listView_Main.HideSelection = false;
-            this.listView_Main.Location = new System.Drawing.Point(12, 12);
+            this.listView_Main.Location = new System.Drawing.Point(0, 0);
             this.listView_Main.MultiSelect = false;
             this.listView_Main.Name = "listView_Main";
-            this.listView_Main.Size = new System.Drawing.Size(675, 426);
+            this.listView_Main.Size = new System.Drawing.Size(975, 629);
             this.listView_Main.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listView_Main.TabIndex = 1;
             this.listView_Main.UseCompatibleStateImageBehavior = false;
@@ -120,7 +125,7 @@
             // 
             // button_Add
             // 
-            this.button_Add.Location = new System.Drawing.Point(704, 193);
+            this.button_Add.Location = new System.Drawing.Point(9, 186);
             this.button_Add.Name = "button_Add";
             this.button_Add.Size = new System.Drawing.Size(92, 23);
             this.button_Add.TabIndex = 2;
@@ -131,7 +136,7 @@
             // button_Edit
             // 
             this.button_Edit.Enabled = false;
-            this.button_Edit.Location = new System.Drawing.Point(704, 121);
+            this.button_Edit.Location = new System.Drawing.Point(9, 114);
             this.button_Edit.Name = "button_Edit";
             this.button_Edit.Size = new System.Drawing.Size(92, 23);
             this.button_Edit.TabIndex = 3;
@@ -142,7 +147,7 @@
             // button_Remove
             // 
             this.button_Remove.Enabled = false;
-            this.button_Remove.Location = new System.Drawing.Point(704, 222);
+            this.button_Remove.Location = new System.Drawing.Point(9, 215);
             this.button_Remove.Name = "button_Remove";
             this.button_Remove.Size = new System.Drawing.Size(92, 23);
             this.button_Remove.TabIndex = 4;
@@ -152,7 +157,7 @@
             // 
             // textBox_Search
             // 
-            this.textBox_Search.Location = new System.Drawing.Point(704, 48);
+            this.textBox_Search.Location = new System.Drawing.Point(9, 41);
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.Size = new System.Drawing.Size(184, 20);
             this.textBox_Search.TabIndex = 5;
@@ -160,30 +165,45 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(701, 32);
+            this.label1.Location = new System.Drawing.Point(6, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Search";
             // 
+            // columnHeader_DontUpdate
+            // 
+            this.columnHeader_DontUpdate.Text = "Don\'t Update";
+            this.columnHeader_DontUpdate.Width = 76;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button_Save);
+            this.groupBox1.Controls.Add(this.textBox_Search);
+            this.groupBox1.Controls.Add(this.button_Add);
+            this.groupBox1.Controls.Add(this.button_Remove);
+            this.groupBox1.Controls.Add(this.button_Edit);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(761, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(214, 629);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Controls";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 452);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox_Search);
-            this.Controls.Add(this.button_Remove);
-            this.Controls.Add(this.button_Edit);
-            this.Controls.Add(this.button_Add);
+            this.ClientSize = new System.Drawing.Size(975, 629);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listView_Main);
-            this.Controls.Add(this.button_Save);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "TkvItemFilter";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -204,6 +224,8 @@
         private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.TextBox textBox_Search;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader_DontUpdate;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

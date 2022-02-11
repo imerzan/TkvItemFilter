@@ -32,6 +32,7 @@ namespace TkvItemFilter
             checkBox_Important.Checked = _item.Important;
             checkBox_Quest.Checked = _item.QuestItem;
             checkBox_Show.Checked = _item.ShowItem;
+            checkBox_DontUpdate.Checked = _item.DontUpdate;
         }
 
         private void textBox_Group_TextChanged(object sender, EventArgs e)
@@ -51,6 +52,7 @@ namespace TkvItemFilter
             _item.ShowItem = checkBox_Show.Checked;
             _item.Important = checkBox_Important.Checked;
             _item.QuestItem = checkBox_Quest.Checked;
+            _item.DontUpdate = checkBox_DontUpdate.Checked;
             this.DialogResult = DialogResult.OK;
         }
     }

@@ -40,6 +40,7 @@
             this.textBox_ShortName = new System.Windows.Forms.TextBox();
             this.textBox_Group = new System.Windows.Forms.TextBox();
             this.button_Save = new System.Windows.Forms.Button();
+            this.checkBox_DontUpdate = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox_Key
@@ -149,11 +150,22 @@
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
+            // checkBox_DontUpdate
+            // 
+            this.checkBox_DontUpdate.AutoSize = true;
+            this.checkBox_DontUpdate.Location = new System.Drawing.Point(15, 223);
+            this.checkBox_DontUpdate.Name = "checkBox_DontUpdate";
+            this.checkBox_DontUpdate.Size = new System.Drawing.Size(93, 17);
+            this.checkBox_DontUpdate.TabIndex = 12;
+            this.checkBox_DontUpdate.Text = "Dont Update?";
+            this.checkBox_DontUpdate.UseVisualStyleBackColor = true;
+            // 
             // ItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 327);
+            this.Controls.Add(this.checkBox_DontUpdate);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.textBox_Group);
             this.Controls.Add(this.textBox_ShortName);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.TextBox textBox_ShortName;
         private System.Windows.Forms.TextBox textBox_Group;
         private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.CheckBox checkBox_DontUpdate;
     }
 }
